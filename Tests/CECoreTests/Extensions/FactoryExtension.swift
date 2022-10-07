@@ -6,12 +6,12 @@
 //
 
 import Factory
-import CEDomain
 import Foundation
+@testable import CECore
 
 extension Container {
     /// Override regular dependencies with mocked objects
-    static func configureMocks() {
+    public static func configureMocks() {
         currencyConverterRemoteDataSource.register(factory: { CurrencyConverterMockRemoteDataSource() })
     }
 }
