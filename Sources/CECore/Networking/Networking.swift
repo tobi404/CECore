@@ -7,7 +7,7 @@
 
 import Factory
 import Combine
-import RxSwift
+import CEDomain
 import Foundation
 
 /// HTTP request methods.

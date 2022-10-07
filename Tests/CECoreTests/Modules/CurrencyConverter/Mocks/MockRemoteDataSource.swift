@@ -8,19 +8,20 @@
 
 import Factory
 import Foundation
-@testable import CurrencyExchange
+@testable import CEDomain
+@testable import CECore
 
 final class CurrencyConverterMockRemoteDataSource: CurrencyConverterRemoteDataSourceInterface {
 
-    func getExchangedValue(amount: String, fromCurrency: CurrencyExchange.CurrencyEntity, toCurrency: CurrencyExchange.CurrencyEntity) async throws -> CurrencyExchange.CurrencyExchangeResultModel {
-        CurrencyExchange.CurrencyExchangeResultModel(amount: "123.45", currency: "USD")
+    func getExchangedValue(amount: String, fromCurrency: CurrencyEntity, toCurrency: CurrencyEntity) async throws -> CurrencyExchangeResultModel {
+        CurrencyExchangeResultModel(amount: "123.45", currency: "USD")
     }
 
-    func getAvailableCurrencies() async throws -> [CurrencyExchange.CurrencyEntity] {
+    func getAvailableCurrencies() async throws -> [CurrencyEntity] {
         [
-            CurrencyExchange.CurrencyEntity(name: "EUR", symbol: "€"),
-            CurrencyExchange.CurrencyEntity(name: "USD", symbol: "$"),
-            CurrencyExchange.CurrencyEntity(name: "JPY", symbol: "¥")
+            CurrencyEntity(name: "EUR", symbol: "€"),
+            CurrencyEntity(name: "USD", symbol: "$"),
+            CurrencyEntity(name: "JPY", symbol: "¥")
         ]
     }
 

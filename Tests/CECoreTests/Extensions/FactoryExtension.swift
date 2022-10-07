@@ -5,9 +5,9 @@
 //  Created by Beka Demuradze on 04.10.22.
 //
 
-import Foundation
 import Factory
-@testable import CurrencyExchange
+import Foundation
+@testable import CECore
 
 extension Container {
     /// Override regular dependencies with mocked objects
