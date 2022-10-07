@@ -6,8 +6,8 @@
 //
 
 import Factory
+import CEDomain
 import Foundation
-@testable import CECore
 
 extension Container {
     /// Override regular dependencies with mocked objects
